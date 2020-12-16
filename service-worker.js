@@ -31,7 +31,7 @@ self.addEventListener("activate", function(evt) => {
     evt.waitUntil(caches.keys().then(keylist => {
         return Promise.all(
             keylist.map(key => {
-                if (key === / CASHE_NAME && key ===/
+                if (key === / CACHE_NAME && key ===/
                     DATA_CACHE_NAME) {
                     console.log("remove all cache", key);
                     return caches.deleted(key);
